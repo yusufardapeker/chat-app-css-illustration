@@ -37,3 +37,19 @@ body {
 	align-items: center;
 	gap: 48px;
 }
+
+.text-content {
+	text-align: center;
+}
+
+.text-content h1 {
+	color: var(--very-dark-desaturated-violet-main);
+	margin-bottom: 24px;
+	font-size: 36px;
+}
+
+.text-content p {
+	color: var(--dark-grayish-violet);
+	line-height: 1.8;
+	width: 30ch;
+}
