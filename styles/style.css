@@ -17,3 +17,9 @@
 	--very-dark-desaturated-violet-btn: hsl(271, 36%, 24%);
 	--very-light-magenta: hsl(289, 100%, 72%);
 }
+
+body {
+	font-family: "Rubik", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
