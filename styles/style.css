@@ -1,6 +1,6 @@
 :root {
 	/* Text */
-	--pale-violet: hsl(276, 100%, 81%);
+	--pale-violet: hsla(276, 100%, 81%, 0.2);
 	--moderate-violet: hsl(276, 55%, 52%);
 	--desaturated-dark-violet: hsl(271, 15%, 43%);
 	--grayish-blue: hsl(206, 6%, 79%);
@@ -28,7 +28,7 @@ body {
 .container {
 	width: 88%;
 	max-width: 1024px;
-	height: 100vh;
+	min-height: 140vh;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -45,7 +45,7 @@ body {
 .text-content h1 {
 	color: var(--very-dark-desaturated-violet-main);
 	margin-bottom: 24px;
-	font-size: 36px; /*Font size 38px yap + Font weight ekle */
+	font-size: 36px;
 }
 
 .text-content p {
@@ -54,6 +54,7 @@ body {
 	width: 30ch;
 }
 
+/* Telephone Head */
 .telephone-illustration {
 	border: 10px solid var(--white);
 	border-radius: 12px;
@@ -63,18 +64,30 @@ body {
 .telephone-head {
 	background: linear-gradient(to right, var(--light-violet), var(--light-magenta));
 	border-radius: 12px 12px 4px 4px;
-	padding: 16px;
+	padding: 32px 16px 16px 16px;
 	position: relative;
+}
+
+.telephone-head:before {
+	content: "";
+	position: absolute;
+	background-color: var(--white);
+	width: 140px;
+	height: 18px;
+	border-radius: 0 0 24px 24px;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .telephone-head .left-arrow {
 	position: absolute;
 	left: 12px;
-	top: 48%;
+	top: 55%;
 	height: 2px;
 	width: 8px;
 	background-color: var(--white);
-	transform: translateY(-48%) rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 .telephone-head .left-arrow::after {
@@ -145,4 +158,137 @@ body {
 	background-color: var(--white);
 	top: 5px;
 	right: 0px;
+}
+
+/* Telephone Body */
+
+.telephone-body {
+	padding: 12px;
+	font-size: 10px;
+	position: relative;
+}
+
+.telephone-body .sender-message {
+	width: 24ch;
+	padding: 8px;
+	background-color: var(--pale-violet);
+	color: var(--moderate-violet);
+	border-radius: 12px 12px 12px 4px;
+}
+
+.telephone-body .sender-message:first-child {
+	margin-bottom: 8px;
+}
+
+.telephone-body .user-message {
+	margin-left: auto;
+	padding: 8px;
+	background-color: var(--white);
+	color: var(--desaturated-dark-violet);
+	border-radius: 12px 12px 4px 12px;
+}
+
+/* It works this way but I don't exactly know why. I would expect :first-child selector work */
+.telephone-body .user-message:nth-child(4) {
+	width: 26ch;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.telephone-body .user-message:nth-child(5) {
+	width: 16ch;
+	margin-bottom: 16px;
+}
+
+.telephone-body .images {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-top: 20px;
+}
+
+.telephone-body .images img {
+	width: 42px;
+	border-radius: 8px;
+}
+
+.telephone-body .offer {
+	background: linear-gradient(to right, var(--light-magenta), var(--light-violet));
+	display: flex;
+	justify-content: space-between;
+	padding: 12px 12px 12px 28px;
+	color: var(--white);
+	border-radius: 12px 12px 12px 4px;
+	width: 28ch;
+	position: relative;
+}
+
+.telephone-body .offer > p {
+	opacity: 0.8;
+}
+
+.telephone-body .offer:before {
+	position: absolute;
+	content: "";
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	padding: 6px;
+	border: 1px solid var(--grayish-blue);
+	opacity: 0.8;
+}
+
+.telephone-body .offer .offer-price {
+	font-weight: 700;
+	font-size: 12px;
+}
+
+.telephone-body .offer:nth-child(7) {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.telephone-body .send-input {
+	background-color: var(--white);
+	padding: 12px 12px 12px 20px;
+	border-radius: 24px;
+	margin-top: 16px;
+	position: relative;
+}
+
+.telephone-body .send-input .placeholder-text {
+	color: var(--grayish-blue);
+}
+
+.telephone-body .send-input .send-button {
+	background-color: var(--very-dark-desaturated-violet-btn);
+	padding: 12px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	transform: translateY(-50%);
+}
+
+.telephone-body .send-input .send-button:before {
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 2px;
+	background-color: var(--white);
+	transform: rotate(45deg) translate(-50%);
+	top: 50%;
+	left: 50%;
+}
+
+.telephone-body .send-input .send-button:after {
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 2px;
+	background-color: var(--white);
+	transform: rotate(135deg);
+	top: 55%;
+	left: 35%;
 }
