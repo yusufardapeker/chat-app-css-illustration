@@ -28,7 +28,7 @@ body {
 .container {
 	width: 88%;
 	max-width: 1024px;
-	min-height: 140vh;
+	min-height: 150vh;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -59,7 +59,10 @@ body {
 	border: 10px solid var(--white);
 	border-radius: 12px;
 	width: 252px;
+	position: relative;
 }
+
+/* It is not working and I am getting mad. */
 
 .telephone-head {
 	background: linear-gradient(to right, var(--light-violet), var(--light-magenta));
@@ -166,6 +169,7 @@ body {
 	padding: 12px;
 	font-size: 10px;
 	position: relative;
+	background-color: var(--light-grayish-violet);
 }
 
 .telephone-body .sender-message {
@@ -291,4 +295,15 @@ body {
 	transform: rotate(135deg);
 	top: 55%;
 	left: 35%;
+}
+
+.bg-gradient-shape {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to bottom, var(--light-magenta), var(--light-violet));
+	width: 200px;
+	height: 530px;
+	z-index: -1;
+	border-radius: 0 0 999px 0;
 }
