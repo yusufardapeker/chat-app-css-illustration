@@ -45,7 +45,7 @@ body {
 .text-content h1 {
 	color: var(--very-dark-desaturated-violet-main);
 	margin-bottom: 24px;
-	font-size: 36px;
+	font-size: 38px;
 }
 
 .text-content p {
@@ -58,8 +58,9 @@ body {
 .telephone-illustration {
 	border: 10px solid var(--white);
 	border-radius: 12px;
-	width: 252px;
+	width: 260px;
 	position: relative;
+	background-color: var(--light-grayish-violet);
 }
 
 /* It is not working and I am getting mad. */
@@ -78,7 +79,7 @@ body {
 	width: 140px;
 	height: 18px;
 	border-radius: 0 0 24px 24px;
-	top: 0;
+	top: -2px;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -306,4 +307,27 @@ body {
 	height: 530px;
 	z-index: -1;
 	border-radius: 0 0 999px 0;
+}
+
+@media (min-width: 1440px) {
+	.container {
+		flex-direction: row;
+		min-height: 100vh;
+		gap: 104px;
+	}
+
+	.text-content {
+		text-align: left;
+	}
+
+	.text-content p {
+		width: 44ch;
+	}
+
+	.bg-gradient-shape {
+		width: 500px;
+		height: 760px;
+		border-radius: 0 0 999px 999px;
+		left: -104px;
+	}
 }
