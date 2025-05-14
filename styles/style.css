@@ -58,13 +58,12 @@ body {
 /* Telephone Head */
 .telephone-illustration {
 	border: 10px solid var(--white);
-	border-radius: 12px;
-	width: 260px;
+	border-radius: 24px;
+	width: 280px;
 	position: relative;
 	background-color: var(--light-grayish-violet);
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
-
-/* It is not working and I am getting mad. */
 
 .telephone-head {
 	background: linear-gradient(to right, var(--light-violet), var(--light-magenta));
@@ -90,20 +89,20 @@ body {
 	left: 12px;
 	top: 55%;
 	height: 2px;
-	width: 8px;
+	width: 9px;
 	background-color: var(--white);
-	transform: rotate(-45deg);
+	transform: rotate(-60deg);
 }
 
 .telephone-head .left-arrow::after {
 	content: "";
 	position: absolute;
-	left: -3px;
+	left: -5px;
 	top: 4px;
 	height: 2px;
 	width: 8px;
 	background-color: var(--white);
-	transform: rotate(90deg);
+	transform: rotate(120deg);
 }
 
 .telephone-head .profile {
@@ -138,9 +137,8 @@ body {
 	height: 3px;
 	border-radius: 50%;
 	background-color: var(--white);
-	top: 50%;
+	top: 60%;
 	right: 12px;
-	transform: translate(-50%);
 }
 
 .telephone-head .three-dots::before {
@@ -172,6 +170,7 @@ body {
 	font-size: 10px;
 	position: relative;
 	background-color: var(--light-grayish-violet);
+	border-radius: 0 0 24px 24px;
 }
 
 .telephone-body .sender-message {
@@ -222,10 +221,10 @@ body {
 	background: linear-gradient(to right, var(--light-magenta), var(--light-violet));
 	display: flex;
 	justify-content: space-between;
-	padding: 12px 12px 12px 28px;
+	padding: 12px 12px 12px 32px;
 	color: var(--white);
 	border-radius: 12px 12px 12px 4px;
-	width: 28ch;
+	width: 30ch;
 	position: relative;
 }
 
@@ -296,7 +295,7 @@ body {
 	background-color: var(--white);
 	transform: rotate(135deg);
 	top: 55%;
-	left: 35%;
+	left: 38%;
 }
 
 .bg-gradient-shape-magenta {
